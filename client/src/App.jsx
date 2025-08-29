@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import Navbar from "./components/navbar";
-
-import Home from './pages/home'
+import Navbar from "./components/Navbar"   // Make sure file is Navbar.jsx (capital N)
+import Home from './pages/Home'           // Capital H (file should be Home.jsx)
 import CarDetails from './pages/CarDetails'
 import Cars from './pages/Cars'
 import Mybooking from './pages/Mybooking'
@@ -17,15 +16,15 @@ import { Toaster } from 'react-hot-toast'
 import { useAppContext } from './context/AppContext'
 
 const App = () => {
-  const {showLogin} =useAppContext()
+  const { showLogin } = useAppContext()
   const isOwnerPath = useLocation().pathname.startsWith('/owner')
 
   return (
     <>
-    <Toaster/>
-      {showLogin && <Login/>}
+      <Toaster />
+      {showLogin && <Login />}
 
-      {!isOwnerPath && <Navbar/>}
+      {!isOwnerPath && <Navbar />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -46,4 +45,3 @@ const App = () => {
 }
 
 export default App
-
