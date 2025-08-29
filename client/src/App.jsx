@@ -1,7 +1,10 @@
+// src/App.jsx
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import Navbar from "./components/Navbar"   // Make sure file is Navbar.jsx (capital N)
-import Home from './pages/Home'           // Capital H (file should be Home.jsx)
+import Navbar from './components/Navbar'
+
+
+import Home from './pages/Home'
 import CarDetails from './pages/CarDetails'
 import Cars from './pages/Cars'
 import Mybooking from './pages/Mybooking'
@@ -45,3 +48,4 @@ const App = () => {
 }
 
 export default App
+
